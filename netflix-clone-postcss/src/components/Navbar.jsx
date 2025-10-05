@@ -3,7 +3,6 @@ import { Link, useNavigate } from "react-router-dom";
 import { UserAuth } from "../context/AuthContext";
 const Navbar = () => {
   const {user, logOut} = UserAuth()
-  // console.log(user.email)
   const Navigate = useNavigate();
   const handleLogout = async () => {
       try {

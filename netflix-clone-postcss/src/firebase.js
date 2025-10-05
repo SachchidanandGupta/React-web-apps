@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
 let sat = import.meta.env.VITE_FIREBASE_API_KEY
 console.log(sat)
 const firebaseConfig = {
@@ -13,6 +14,5 @@ const firebaseConfig = {
 
 export const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
+export const db = getFirestore(app);
 
-// Debug to make sure env variables load correctly
-console.log("Firebase API Key:", import.meta.env.VITE_FIREBASE_API_KEY);
